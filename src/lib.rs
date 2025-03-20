@@ -14,6 +14,14 @@ macro_rules! log {
 }
 
 #[macro_export]
+macro_rules! debug {
+    ($($arg:tt)*) => {
+        log!($crate::console::style("DEBUG").blue(), $($arg)*);
+    };
+}
+
+
+#[macro_export]
 macro_rules! info {
     ($($arg:tt)*) => {
         log!($crate::console::style("INFO").green(), $($arg)*);
