@@ -16,6 +16,7 @@ macro_rules! log {
 #[macro_export]
 macro_rules! debug {
     ($($arg:tt)*) => {
+        #[cfg(debug_assertions)]
         log!($crate::console::style("DEBUG").blue(), $($arg)*);
     };
 }
