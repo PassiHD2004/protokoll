@@ -1,0 +1,14 @@
+[package]
+name = "protokoll"
+version = "0.1.0"
+edition = "2024"
+description = "Simple logging crate"
+authors = ["Blexyel (formerly known as PassiHD2004"]
+homepage = "https://github.com/PassiHD2004/protokoll"
+repository = "https://github.com/PassiHD2004/protokoll"
+readme = "README.md"
+license = "GPL-3.0"
+
+[dependencies]
+chrono = { version = "0.4.40", default-features = false, features = ["clock"] }
+console = "0.15.11"
